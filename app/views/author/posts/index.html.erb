@@ -2,7 +2,14 @@
 <% provide(:author, 'active') %>
 
 <div class="row">
-  <% @posts.each do |post| %>
-  <%= render post %>
-  <% end %>
+  <div>
+    <%= link_to 'New post', new_author_post_path, class: 'btn btn-primary brn-lg' %>
+  </div>
+  <br>
+  <table class ="table table-striped">
+    <tr>
+      <th colspan="4">Title</th>
+    </tr>
+    <%= render @posts %>
+  </table>
 </div>
